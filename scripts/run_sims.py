@@ -1,5 +1,7 @@
-import argparse, yaml, json
-from nr_urlcc import simulate
+import argparse
+import yaml
+import json
+from nr_urllc import simulate
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

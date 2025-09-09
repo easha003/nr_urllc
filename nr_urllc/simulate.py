@@ -1,6 +1,7 @@
 import numpy as np
 from . import channel, metrics, fec, utils
 
+
 def run(cfg: dict) -> dict:
     """Run a minimal QPSK+AWGN simulation."""
     rng = utils.get_rng(cfg["seed"])
@@ -9,7 +10,7 @@ def run(cfg: dict) -> dict:
 
     # QPSK mapping
     bits = rng.integers(0, 2, size=n_bits)
-    symbols = (1-2*bits[0::2]) + 1j*(1-2*bits[1::2])
+    symbols = (1 - 2 * bits[0::2]) + 1j * (1 - 2 * bits[1::2])
     symbols = symbols.astype(np.complex64)
 
     # Channel
